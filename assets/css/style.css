@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #081a2a;
+  color: #e7edf4;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+a {
+  color: #9ec3ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: 100vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.left h1 {
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.left p {
+  max-width: 520px;
+  margin: 0 0 1rem;
+  color: #cbd5df;
+}
+
+.social a {
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+.right {
+  padding: 1rem 1.5rem 2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tab-link {
+  background: none;
+  border: 0;
+  color: #9ec3ff;
+  cursor: pointer;
+  font: inherit;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.tab-link.active {
+  color: #e7edf4;
+  font-weight: bold;
+}
+
+.tab-panel {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+h2 {
+  margin: 0.5rem 0;
+  font-size: 1.6rem;
+}
+
+h3 {
+  margin: 1rem 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #dbe8f7;
+}
+
+.meta {
+  margin: 0.15rem 0;
+  color: #b5c2cf;
+  font-size: 0.92rem;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+
+.meta-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: #b5c2cf;
+}
+
+.doc-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.doc-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+  font-size: 0.8rem;
+  color: #9ca8b5;
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 45vh;
+  }
+}
