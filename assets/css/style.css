@@ -141,6 +141,25 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.leadership-list {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.1rem;
+  color: var(--text-accent);
+}
+
+.leadership-list li {
+  margin-bottom: 0.5rem;
+}
+
+.leadership-list li strong {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.leadership-list li p {
+  margin: 0.15rem 0 0;
+  color: var(--secondary-accent);
+}
+
 .about-actions {
   display: flex;
   flex-wrap: wrap;
