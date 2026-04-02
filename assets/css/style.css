@@ -374,6 +374,27 @@ h4 {
   color: var(--secondary-accent);
 }
 
+.experience-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.experience-photo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resume-photo {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(246, 241, 255, 0.35);
+  object-fit: cover;
+}
+
 .doc-links {
   display: flex;
   flex-direction: column;
@@ -414,6 +435,14 @@ h4 {
   .services-intro-grid,
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .experience-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-photo {
+    justify-content: flex-start;
   }
 
   .why-grid,
