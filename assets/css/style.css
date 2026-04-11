@@ -3,18 +3,23 @@
 }
 
 :root {
-  --primary-purple: #ffb3f1;
-  --base-background: #734f96;
-  --text-accent: #f6f1ff;
-  --secondary-accent: #dcc7f7;
-  --deep-accent: #2a1c4f;
-  --warm-accent: #ffb3f1;
+  --primary-purple: #f09895;
+  --base-background: #439093;
+  --surface-left: #3f868a;
+  --surface-right: #4b989c;
+  --text-accent: #f9ebd9;
+  --secondary-accent: #e8d6d7;
+  --deep-accent: #21474b;
+  --warm-accent: #e9dd8a;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: var(--base-background);
+  background:
+    radial-gradient(circle at 15% 18%, rgba(240, 152, 149, 0.28), transparent 44%),
+    radial-gradient(circle at 82% 20%, rgba(233, 221, 138, 0.18), transparent 42%),
+    var(--base-background);
   color: var(--text-accent);
   line-height: 1.5;
 }
@@ -33,7 +38,7 @@ p {
 }
 
 a {
-  color: var(--primary-purple);
+  color: var(--warm-accent);
   text-decoration: none;
 }
 
@@ -54,7 +59,8 @@ a:hover {
   align-items: center;
   position: relative;
   padding: 2rem;
-  border-right: 1px solid rgba(246, 241, 255, 0.25);
+  background: var(--surface-left);
+  border-right: 1px solid rgba(249, 235, 217, 0.28);
   text-align: center;
 }
 
@@ -85,6 +91,7 @@ a:hover {
 
 .right {
   padding: 1rem 1.5rem 2rem;
+  background: var(--surface-right);
 }
 
 .nav {
@@ -93,7 +100,7 @@ a:hover {
   flex-wrap: wrap;
   font-size: 0.9rem;
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(246, 241, 255, 0.25);
+  border-bottom: 1px solid rgba(249, 235, 217, 0.34);
   padding-bottom: 0.75rem;
   margin-bottom: 1rem;
 }
@@ -101,7 +108,7 @@ a:hover {
 .tab-link {
   background: none;
   border: 0;
-  color: var(--primary-purple);
+  color: var(--secondary-accent);
   cursor: pointer;
   font: inherit;
   text-transform: uppercase;
@@ -178,7 +185,7 @@ a:hover {
   padding: 0;
   padding-left: 1rem;
   border: 0;
-  border-left: 2px solid rgba(246, 241, 255, 0.7);
+  border-left: 2px solid rgba(233, 221, 138, 0.78);
   border-radius: 0;
   background: transparent;
   backdrop-filter: none;
@@ -196,10 +203,10 @@ a:hover {
 }
 
 .service-card {
-  border: 1px solid rgba(246, 241, 255, 0.25);
+  border: 1px solid rgba(249, 235, 217, 0.24);
   border-radius: 0.5rem;
   padding: 0.95rem;
-  background: rgba(42, 28, 79, 0.15);
+  background: rgba(33, 71, 75, 0.24);
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
@@ -208,7 +215,7 @@ a:hover {
 .service-card:hover {
   transform: translateY(-4px);
   border-color: var(--primary-purple);
-  background: rgba(42, 28, 79, 0.25);
+  background: rgba(33, 71, 75, 0.34);
 }
 
 .service-card::before {
@@ -259,8 +266,8 @@ a:hover {
 
 .cta-btn-secondary {
   background: transparent;
-  border-color: var(--text-accent);
-  color: var(--text-accent);
+  border-color: var(--warm-accent);
+  color: var(--warm-accent);
 }
 
 h2 {
@@ -313,10 +320,10 @@ h4 {
 }
 
 .how-step {
-  border: 1px solid rgba(246, 241, 255, 0.2);
+  border: 1px solid rgba(249, 235, 217, 0.2);
   padding: 0.6rem;
   border-radius: 0.4rem;
-  background: rgba(42, 28, 79, 0.12);
+  background: rgba(33, 71, 75, 0.2);
   font-size: 0.85rem;
 }
 
@@ -328,10 +335,10 @@ h4 {
 }
 
 .why-card {
-  border: 1px solid rgba(246, 241, 255, 0.2);
+  border: 1px solid rgba(249, 235, 217, 0.2);
   padding: 0.7rem;
   border-radius: 0.4rem;
-  background: rgba(42, 28, 79, 0.12);
+  background: rgba(33, 71, 75, 0.2);
 }
 
 .why-card h4 {
@@ -346,10 +353,10 @@ h4 {
 }
 
 .engagement-card {
-  border: 1px solid rgba(246, 241, 255, 0.2);
+  border: 1px solid rgba(249, 235, 217, 0.2);
   padding: 0.7rem;
   border-radius: 0.4rem;
-  background: rgba(42, 28, 79, 0.12);
+  background: rgba(33, 71, 75, 0.2);
 }
 
 .engagement-card h4 {
@@ -391,7 +398,7 @@ h4 {
   width: 100%;
   max-width: 320px;
   border-radius: 0.5rem;
-  border: 1px solid rgba(246, 241, 255, 0.35);
+  border: 1px solid rgba(249, 235, 217, 0.35);
   object-fit: cover;
 }
 
@@ -461,7 +468,7 @@ h4 {
 
   .left {
     border-right: 0;
-    border-bottom: 1px solid rgba(246, 241, 255, 0.25);
+    border-bottom: 1px solid rgba(249, 235, 217, 0.25);
     min-height: 45vh;
   }
 
