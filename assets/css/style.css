@@ -7,15 +7,15 @@
   --base-background: #439093;
   --surface-left: #3f868a;
   --surface-right: #4b989c;
-  --text-accent: #f9ebd9;
-  --secondary-accent: #e8d6d7;
+  --text-accent: #ffffff;
+  --secondary-accent: #ffffff;
   --deep-accent: #21474b;
   --warm-accent: #e9dd8a;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   background:
     radial-gradient(circle at 15% 18%, rgba(240, 152, 149, 0.28), transparent 44%),
     radial-gradient(circle at 82% 20%, rgba(233, 221, 138, 0.18), transparent 42%),
@@ -30,11 +30,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 p {
   font-family: 'Open Sans', Arial, sans-serif;
+}
+
+button,
+a,
+li,
+span,
+strong {
+  font-family: inherit;
 }
 
 a {
@@ -50,6 +58,7 @@ a:hover {
   display: grid;
   grid-template-columns: 42% 58%;
   min-height: 100vh;
+  align-items: start;
 }
 
 .left {
@@ -57,8 +66,11 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: sticky;
+  top: 0;
   padding: 2rem;
+  height: 100vh;
+  overflow-y: auto;
   background: var(--surface-left);
   border-right: 1px solid rgba(249, 235, 217, 0.28);
   text-align: center;
@@ -108,11 +120,12 @@ a:hover {
 .tab-link {
   background: none;
   border: 0;
-  color: var(--secondary-accent);
+  color: var(--primary-purple);
   cursor: pointer;
   font: inherit;
   text-transform: uppercase;
   padding: 0;
+  font-weight: bold;
 }
 
 .tab-link.active {
@@ -467,9 +480,13 @@ h4 {
   }
 
   .left {
+    position: relative;
+    top: auto;
     border-right: 0;
     border-bottom: 1px solid rgba(249, 235, 217, 0.25);
+    height: auto;
     min-height: 45vh;
+    overflow-y: visible;
   }
 
   .footer {
