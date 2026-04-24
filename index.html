@@ -82,7 +82,7 @@
     <main class="page">
       <aside class="left">
         <img class="avatar" src="img/Charity-Rankins-Profile-Main.jpg" alt="Profile photo" />
-        <h1>I'M <span style="color: var(--primary-purple);">CHARITY RANKINS</span></h1>
+        <h1><span style="color: var(--primary-purple);">CHARITY RANKINS</span></h1>
         <p>
           I'm always eager to learn, grow and share my knowledge. My motto is
           "You don't have to be great to start, but you can't finish until you do".
@@ -91,7 +91,7 @@
           <a href="https://www.linkedin.com/in/charity-rankins/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="mailto:charity.rankins@gmail.com">Email</a>
         </div>
-        <p class="footer">© Charity Rankins 2026</p>
+       <!-- <p class="sidebar-footer">© Charity Rankins 2026 --> </p>
       </aside>
 
       <section class="right">
@@ -103,6 +103,9 @@
           <button class="tab-link" type="button" data-target="case-studies">Case Studies</button>
           <button class="tab-link" type="button" data-target="services">Services</button>
           <button class="tab-link" type="button" data-target="documents">Documents</button>
+          <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-label="Toggle full view">
+            <span>Full view</span>
+          </button>
         </nav>
 
         <section id="about" class="tab-panel active">
@@ -218,75 +221,61 @@
         <section id="leadership" class="tab-panel">
           <h2>Leadership &amp; Philosophy</h2>
 
-          <h3>Leadership &amp; Professional Involvement</h3>
-          <p>
-            I am an active leader in the HR community and committed to advancing
-            the profession through service and development.
-          </p>
-          <ul class="leadership-list">
-            <li>
-              <strong>Certifications Director, Prince George's County SHRM Chapter</strong>
-              <p>Supporting HR professionals in achieving certification and advancing their careers</p>
-            </li>
-            <li>
-              <strong>Recognized Volunteer Leader, Society for Human Resource Management</strong>
-              <p>Honored for contributions to the HR community at the national level</p>
-            </li>
-            <li>
-              <strong>SHRM-CP Certified</strong>
-            </li>
-          </ul>
-          <p>
-            Through this work, I stay connected to industry trends while helping
-            others grow and succeed in their careers.
-          </p>
+          <div class="leadership-grid">
+            <article class="item">
+              <h3>Leadership &amp; Professional Involvement</h3>
+              <p>
+                I am an active leader in the HR community and committed to advancing
+                the profession through service and development.
+              </p>
+              <ul class="meta-list">
+                <li><strong>Certifications Director, Prince George's County SHRM Chapter:</strong> Supporting HR professionals in achieving certification and advancing their careers.</li>
+                <li><strong>Recognized Volunteer Leader, Society for Human Resource Management:</strong> Honored for contributions to the HR community at the national level.</li>
+                <li><strong>SHRM-CP Certified</strong></li>
+              </ul>
+            </article>
 
-          <h3>Entrepreneurship</h3>
-          <p>
-            In addition to my corporate leadership experience, I am the founder
-            of <a href="https://www.pskarma.com" target="_blank" rel="noreferrer">P.S. KaRMA Arts &amp; Crafts Enrichment Company</a>, an award-winning
-            program serving children and families across the DMV area.
-          </p>
-          <p>
-            For five consecutive years, <a href="https://www.pskarma.com" target="_blank" rel="noreferrer">P.S. KaRMA</a> has been recognized as the
-            Best Arts &amp; Crafts Program in the region, reflecting a commitment
-            to creativity, community impact, and high-quality programming.
-          </p>
-          <p>
-            Through this work, I've built and scaled a business that combines
-            operational strategy with purpose-driven programming, further
-            strengthening my ability to lead, innovate, and execute.
-          </p>
+            <article class="item">
+              <h3>Entrepreneurship</h3>
+              <p>
+                In addition to my corporate leadership experience, I am the founder
+                of <a href="https://www.pskarma.com" target="_blank" rel="noreferrer">P.S. KaRMA Arts &amp; Crafts Enrichment Company</a>, an award-winning
+                program serving children and families across the DMV area.
+              </p>
+              <p>
+                For five consecutive years, <a href="https://www.pskarma.com" target="_blank" rel="noreferrer">P.S. KaRMA</a> has been recognized as the
+                Best Arts &amp; Crafts Program in the region, reflecting a commitment
+                to creativity, community impact, and high-quality programming.
+              </p>
+            </article>
 
-          <h3>My Philosophy</h3>
-          <p>I believe that strong organizations are built intentionally.</p>
-          <p>
-            When people are supported, systems are clear, and leadership is
-            developed, organizations don't just function, they thrive.
-          </p>
-          <p>My goal is to create environments where:</p>
-          <ul class="meta-list about-list">
-            <li>People feel valued and empowered</li>
-            <li>Leaders are equipped to lead effectively</li>
-            <li>Systems support growth rather than slow it down</li>
-          </ul>
-          <p>Because when you invest in people the right way, everything else follows.</p>
+            <article class="item">
+              <h3>My Philosophy</h3>
+              <p>I believe that strong organizations are built intentionally.</p>
+              <p>
+                When people are supported, systems are clear, and leadership is
+                developed, organizations don't just function, they thrive.
+              </p>
+              <ul class="meta-list about-list">
+                <li>People feel valued and empowered</li>
+                <li>Leaders are equipped to lead effectively</li>
+                <li>Systems support growth rather than slow it down</li>
+              </ul>
+            </article>
 
-          <h3>Beyond the Work</h3>
-          <p>
-            Beyond my professional work, I am deeply committed to family,
-            community, and creating meaningful experiences.
-          </p>
-          <p>
-            Whether I'm developing programs for children, leading initiatives at
-            work, or building something new, my focus remains the same: creating
-            impact that lasts.
-          </p>
-          <p>
-            If you're looking for a strategic partner, a people-first leader, or
-            someone who knows how to turn vision into execution, I'd love to
-            connect.
-          </p>
+            <article class="item">
+              <h3>Beyond the Work</h3>
+              <p>
+                Beyond my professional work, I am deeply committed to family,
+                community, and creating meaningful experiences.
+              </p>
+              <p>
+                Whether I'm developing programs for children, leading initiatives at
+                work, or building something new, my focus remains the same: creating
+                impact that lasts.
+              </p>
+            </article>
+          </div>
 
           <div class="about-actions">
             <a class="cta-btn" href="https://www.linkedin.com/in/charity-rankins/" target="_blank" rel="noreferrer">Let's Connect</a>
@@ -341,59 +330,61 @@
           <h2>Case Studies</h2>
           <p class="about-subtitle">Real challenges. Practical solutions. Measurable impact.</p>
 
-          <article class="item">
-            <h3>Building a Performance Management System from Scratch</h3>
-            <p class="meta">People Operations</p>
-            <br />
-            <h4>Challenge</h4>
-            <p>The organization lacked a consistent, scalable framework for setting expectations, evaluating performance, and developing employees across a growing workforce of 100+ staff.</p>
-            <h4>Approach</h4>
-            <ul class="meta-list">
-              <li>Conducted a needs assessment to identify gaps in current practices</li>
-              <li>Designed a competency-based performance review cycle aligned to organizational values</li>
-              <li>Developed manager training to ensure consistent, fair evaluation practices</li>
-              <li>Built communication and rollout plan to drive adoption across the organization</li>
-            </ul>
-            <br />
-            <h4>Outcome</h4>
-            <p>Launched a fully operational performance management system adopted organization-wide, resulting in clearer expectations, more meaningful feedback conversations, and stronger manager accountability.</p>
-          </article>
+          <div class="case-studies-grid">
+            <article class="item">
+              <h3>Building a Performance Management System from Scratch</h3>
+              <p class="meta">People Operations</p>
+              <br />
+              <h4>Challenge</h4>
+              <p>The organization lacked a consistent, scalable framework for setting expectations, evaluating performance, and developing employees across a growing workforce of 100+ staff.</p>
+              <h4>Approach</h4>
+              <ul class="meta-list">
+                <li>Conducted a needs assessment to identify gaps in current practices</li>
+                <li>Designed a competency-based performance review cycle aligned to organizational values</li>
+                <li>Developed manager training to ensure consistent, fair evaluation practices</li>
+                <li>Built communication and rollout plan to drive adoption across the organization</li>
+              </ul>
+              <br />
+              <h4>Outcome</h4>
+              <p>Launched a fully operational performance management system adopted organization-wide, resulting in clearer expectations, more meaningful feedback conversations, and stronger manager accountability.</p>
+            </article>
 
-          <article class="item">
-            <h3>Redesigning the Hiring Process to Improve Quality and Speed</h3>
-            <p class="meta">Talent Acquisition</p>
-            <br />
-            <h4>Challenge</h4>
-            <p>The recruiting process was inconsistent, time-consuming, and producing mixed-quality hires, creating strain on hiring managers and increasing time-to-fill across departments.</p>
-            <h4>Approach</h4>
-            <ul class="meta-list">
-              <li>Audited the end-to-end hiring process to identify bottlenecks and pain points</li>
-              <li>Standardized job descriptions, interview guides, and evaluation scorecards</li>
-              <li>Implemented structured interview training for hiring managers</li>
-              <li>Streamlined recruiter-to-hiring manager communication and workflow</li>
-            </ul>
-            <br />
-            <h4>Outcome</h4>
-            <p>Reduced average time-to-fill and improved candidate quality through a more structured, data-informed approach. Hiring managers reported greater confidence and consistency in the process.</p>
-          </article>
+            <article class="item">
+              <h3>Redesigning the Hiring Process to Improve Quality and Speed</h3>
+              <p class="meta">Talent Acquisition</p>
+              <br />
+              <h4>Challenge</h4>
+              <p>The recruiting process was inconsistent, time-consuming, and producing mixed-quality hires, creating strain on hiring managers and increasing time-to-fill across departments.</p>
+              <h4>Approach</h4>
+              <ul class="meta-list">
+                <li>Audited the end-to-end hiring process to identify bottlenecks and pain points</li>
+                <li>Standardized job descriptions, interview guides, and evaluation scorecards</li>
+                <li>Implemented structured interview training for hiring managers</li>
+                <li>Streamlined recruiter-to-hiring manager communication and workflow</li>
+              </ul>
+              <br />
+              <h4>Outcome</h4>
+              <p>Reduced average time-to-fill and improved candidate quality through a more structured, data-informed approach. Hiring managers reported greater confidence and consistency in the process.</p>
+            </article>
 
-          <article class="item">
-            <h3>Launching a Leadership Development Program for New Managers</h3>
-            <p class="meta">Organizational Development</p>
-            <br />
-            <h4>Challenge</h4>
-            <p>Newly promoted managers were stepping into leadership roles without formal support, leading to inconsistent team experiences, communication gaps, and early-tenure struggles.</p>
-            <h4>Approach</h4>
-            <ul class="meta-list">
-              <li>Identified core competencies for first-time managers through stakeholder input</li>
-              <li>Designed a multi-module leadership curriculum covering communication, feedback, and accountability</li>
-              <li>Facilitated interactive workshops and peer learning cohorts</li>
-              <li>Created a 90-day manager onboarding roadmap for sustainable transition support</li>
-            </ul>
-            <br />
-            <h4>Outcome</h4>
-            <p>New managers reported increased confidence and clarity in their roles. The program established a replicable model for leadership readiness used across the organization.</p>
-          </article>
+            <article class="item">
+              <h3>Launching a Leadership Development Program for New Managers</h3>
+              <p class="meta">Organizational Development</p>
+              <br />
+              <h4>Challenge</h4>
+              <p>Newly promoted managers were stepping into leadership roles without formal support, leading to inconsistent team experiences, communication gaps, and early-tenure struggles.</p>
+              <h4>Approach</h4>
+              <ul class="meta-list">
+                <li>Identified core competencies for first-time managers through stakeholder input</li>
+                <li>Designed a multi-module leadership curriculum covering communication, feedback, and accountability</li>
+                <li>Facilitated interactive workshops and peer learning cohorts</li>
+                <li>Created a 90-day manager onboarding roadmap for sustainable transition support</li>
+              </ul>
+              <br />
+              <h4>Outcome</h4>
+              <p>New managers reported increased confidence and clarity in their roles. The program established a replicable model for leadership readiness used across the organization.</p>
+            </article>
+          </div>
 
           <div class="about-actions">
             <a class="cta-btn" href="mailto:charity.rankins@gmail.com?subject=Let%27s%20Talk" >Let's Talk</a>
@@ -580,6 +571,14 @@
             <li><a href="#"><i class="fa-regular fa-folder" aria-hidden="true"></i> Recommendations.pdf</a></li>
           </ul>
         </section>
+
+        <footer class="page-footer">
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/charity-rankins/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:charity.rankins@gmail.com">Email</a>
+          </div>
+          <p>© Charity Rankins 2026</p>
+        </footer>
       </section>
     </main>
   </body>

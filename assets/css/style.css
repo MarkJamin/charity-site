@@ -3,14 +3,14 @@
 }
 
 :root {
-  --primary-purple: #f09895;
-  --base-background: #439093;
-  --surface-left: #3f868a;
-  --surface-right: #4b989c;
-  --text-accent: #ffffff;
-  --secondary-accent: #ffffff;
+  --primary-purple: #439093;
+  --base-background: #e9dd8a; 
+  --surface-left: #e9dd8a;
+  --surface-right: #e9dd8a;
+  --text-accent: #333333;
+  --secondary-accent: #333333;
   --deep-accent: #21474b;
-  --warm-accent: #e9dd8a;
+  --warm-accent: #439093;
 }
 
 body {
@@ -55,10 +55,14 @@ a:hover {
 }
 
 .page {
-  display: grid;
-  grid-template-columns: 42% 58%;
+  display: flex;
   min-height: 100vh;
-  align-items: start;
+  align-items: stretch;
+  transition: all 0.4s ease;
+}
+
+.page.sidebar-hidden {
+  justify-content: flex-end;
 }
 
 .left {
@@ -66,14 +70,34 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0;
+  position: relative;
   padding: 2rem;
-  height: 100vh;
-  overflow-y: auto;
+  min-height: 100vh;
+  overflow: hidden;
   background: var(--surface-left);
   border-right: 1px solid rgba(249, 235, 217, 0.28);
   text-align: center;
+  transition: width 0.4s ease, opacity 0.3s ease, transform 0.4s ease, padding 0.4s ease;
+  opacity: 1;
+  min-width: 0;
+  width: 42%;
+}
+
+.page.sidebar-hidden .left {
+  width: 0 !important;
+  opacity: 0;
+  padding: 0 !important;
+  min-width: 0 !important;
+  border-right: 0 !important;
+  pointer-events: none;
+  transform: translateX(-20px);
+}
+
+.right {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem 1.5rem 2rem;
+  background: var(--surface-right);
 }
 
 .avatar {
@@ -88,22 +112,26 @@ a:hover {
   margin: 0.5rem 0;
   letter-spacing: 1px;
   font-size: 2rem;
+  font-weight: 900;
 }
 
 .left p {
   max-width: 520px;
   margin: 0 0 1rem;
   color: var(--secondary-accent);
+  font-weight: 500;
+  line-height: 1.75;
 }
 
 .social a {
-  margin: 0 0.5rem;
-  font-weight: bold;
+  margin: 0 0.75rem;
+  font-weight: 700;
 }
 
 .right {
   padding: 1rem 1.5rem 2rem;
   background: var(--surface-right);
+  min-width: 0;
 }
 
 .nav {
@@ -131,6 +159,33 @@ a:hover {
 .tab-link.active {
   color: var(--text-accent);
   font-weight: bold;
+}
+
+.sidebar-toggle {
+  margin-left: auto;
+  padding: 0.65rem 1.1rem;
+  border: 2px solid var(--primary-purple);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-purple);
+  font: inherit;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sidebar-toggle:hover {
+  background: var(--primary-purple);
+  color: var(--text-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.page.sidebar-hidden .sidebar-toggle {
+  background: var(--primary-purple);
+  color: var(--text-accent);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .tab-panel {
@@ -256,6 +311,70 @@ a:hover {
   font-size: 0.85rem;
 }
 
+/* Leadership & Philosophy is intentionally kept to a 2x2 layout.
+   Case Studies expands to 3 columns on wider screens while leadership
+   remains two columns for better readability and balance. */
+.case-studies-grid,
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .case-studies-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .leadership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.case-studies-grid .item,
+.leadership-grid .item {
+  border: 1px solid rgba(249, 235, 217, 0.24);
+  border-radius: 0.5rem;
+  padding: 0.95rem;
+  background: rgba(33, 71, 75, 0.24);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.case-studies-grid .item:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-purple);
+  background: rgba(33, 71, 75, 0.34);
+}
+
+.case-studies-grid .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-purple);
+  opacity: 0.6;
+}
+
+.leadership-grid .item h3 {
+  position: relative;
+  padding-top: 0;
+}
+
+.leadership-grid .item h3::before {
+  content: "✦";
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--primary-purple);
+  opacity: 0.95;
+  vertical-align: middle;
+}
+
 .cta-btn {
   display: inline-flex;
   align-items: center;
@@ -286,11 +405,13 @@ a:hover {
 h2 {
   margin: 0.5rem 0;
   font-size: 1.6rem;
+  color:var(--primary-purple);
 }
 
 h3 {
   margin: 1rem 0 0.25rem;
   font-size: 1.15rem;
+  color: var(--primary-purple);
 }
 
 h4 {
@@ -430,18 +551,58 @@ h4 {
   gap: 0.5rem;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  padding: 0.75rem 0;
-  font-size: 0.8rem;
+.sidebar-footer {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
   color: var(--secondary-accent);
+}
+
+.page-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(33, 71, 75, 0.12);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  gap: 0.75rem;
+  color: var(--secondary-accent);
+  font-size: 0.95rem;
+  flex-direction: column;
+}
+
+.page-footer .footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.page-footer a {
+  color: var(--primary-purple);
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 900px) {
   .page {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .page.sidebar-hidden .left {
+    display: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .page.sidebar-hidden .right {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .services-hero h2 {
@@ -486,7 +647,12 @@ h4 {
     border-bottom: 1px solid rgba(249, 235, 217, 0.25);
     height: auto;
     min-height: 45vh;
-    overflow-y: visible;
+    overflow: visible;
+    width: 100%;
+  }
+
+  .sidebar-toggle {
+    display: none;
   }
 
   .footer {
